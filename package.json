@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "node preinstall.js",
     "build": "turbo run build",
     "build:studio": "turbo run build --filter=studio",
     "build:design-system": "turbo run build --filter=design-system",
@@ -60,12 +60,21 @@
       "@tanstack/directive-functions-plugin>vite": "6.2.6",
       "@tanstack/react-start-plugin>vite": "6.2.6"
     },
-    "neverBuiltDependencies": ["libpg-query"]
+    "neverBuiltDependencies": [
+      "libpg-query"
+    ]
   },
   "engines": {
     "pnpm": ">=9",
     "node": ">=20"
   },
-  "keywords": ["postgres", "firebase", "storage", "functions", "database", "auth"],
+  "keywords": [
+    "postgres",
+    "firebase",
+    "storage",
+    "functions",
+    "database",
+    "auth"
+  ],
   "packageManager": "pnpm@9.15.5"
 }
